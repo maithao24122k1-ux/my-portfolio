@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - Nguyễn Ngọc Mai Thảo / グエンゴックマイタオ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="hero">
+      <img src="cv.png" alt="img" class="avatar">
+      <div class="intro">
+        <h1><span class="name-vi">グエン ゴック マイ タオ</span><br>Nguyễn Ngọc Mai Thảo </h1>
+        <div class="bio">印刷物デザインやホームページデザインなどを中心に活動。使いやすさと美しさを両立するデザインを目指しています。</div>
+        <div class="nav">
+          <button class="active" data-target="projects" onclick="showTab(event)">制作実績</button>
+          <button data-target="about" onclick="showTab(event)">プロフィール</button>
+          <button data-target="contact" onclick="showTab(event)">お問い合わせ</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="projects" class="active">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2>制作実績</h2>
+          
+        </div>
+        <div class="projects">
+          <div class="card" onclick="openModal(0)">
+            <img src="project1.png" alt="project 1">
+            <div class="meta"><h3>バナー制作</h3><p>eコマース向けUI刷新プロジェクト</p></div>
+          </div>
+          <div class="card" onclick="openModal(1)">
+            <img src="menu/project2.jpg" alt="project 2">
+            <div class="meta"><h3>メニュー制作</h3><p>中小企業のCI/VI制作</p></div>
+          </div>
+          <div class="card" onclick="openModal(2)">
+            <img src="youth/mockup.jpg" alt="project 3">
+            <div class="meta"><h3>ブランディングデザイン</h3><p>予約アプリのUX改善</p></div>
+          </div>
+        </div>
+      </section>
+
+    <section id="about">
+  <h2>プロフィール</h2>
+
+  <div class="kawaii-profile">
+
+    <div class="kp-header">
+      <div class="kp-icon">😊</div>
+      <div class="kp-info">
+        <div class="kp-line"><span class="kp-label">出身</span> ベトナム</div>
+        <div class="kp-line"><span class="kp-label">住んでるところ</span> 日本</div>
+        <div class="kp-line"><span class="kp-label">生年月日</span> 2001年12月24日</div>
+        <div class="kp-line"><span class="kp-label">血液型</span> O型</div>
+      </div>
+    </div>
+
+    <div class="kp-body">
+      <p><span class="kp-bold">名前は</span> タオって呼んでね♪</p>
+      <p><span class="kp-bold">趣味は</span> 撮影 と 旅行！</p>
+      <p><span class="kp-bold">今頑張っていることは</span>JLPTのN2に合格する。</p>
+      <p><span class="kp-bold">将来は</span> 好きなデザインやクリエイティブな仕事をしていきたいです。</p>
+    </div>
+
+    <h3 class="kp-subtitle">♡ MY FAVORITES　♡ </h3>
+
+    <div class="kp-fav-grid">
+      <div class="fav-box"><span>たべもの</span><br>ケーキ</div>
+      <div class="fav-box"><span>どうぶつ</span><br>いぬ</div>
+      <div class="fav-box"><span>おんがく</span><br>J-POP、K-POP</div>
+      <div class="fav-box"><span>いろ</span><br>きんいろ</div>
+      <div class="fav-box"><span>ハマっていること</span><br>韓国ドラマ</div>
+      <div class="fav-box"><span>ばしょ</span><br>カフェ</div>
+    </div>
+
+  <h3 class="kp-subtitle">MY VLOG 🎬</h3>
+    <div class="profile-video">
+    <!-- Nếu dùng YouTube -->
+    <iframe 
+      src="vlog.mp4" 
+      title="My Vlog"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+  <p class="video-caption">💗 日常の一コマ</p>
+
+  </div>
+</section>
+
+
+      <section id="contact">
+        <h2>お問い合わせ</h2>
+        <div class="contact">
+          <div class="card">
+            <p style="color:var(--muted)">直接メールで連絡するか、下のフォームからメッセージを送ってください。</p>
+            <p>Email: <a href="mailto:maithao24122k1@gmail.com">maithao24122k1@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+          </div>
+          <div class="card">
+            <form onsubmit="sendForm(event)">
+              <input type="text" name="name" placeholder="お名前" required>
+              <input type="email" name="email" placeholder="メールアドレス" required>
+              <textarea name="message" rows="5" placeholder="メッセージ" required></textarea>
+              <button type="submit">送信する</button>
+            </form>
+          
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal -->
+ <div class="modal" id="modal">
+  <div class="dialog">
+    <div class="slider">
+      <button class="prev" onclick="prevImg()">‹</button>
+      <img id="modalImg" src="">
+      <button class="next" onclick="nextImg()">›</button>
+    </div>
+
+    <h3 id="modalTitle" style="margin-top:.6rem">Project title</h3>
+    <p id="modalDesc" class="desc">Project description</p>
+
+    <div style="text-align:right;margin-top:.6rem">
+      <button onclick="closeModal()" style="background:none;border:1px solid rgba(255,255,255,0.06);padding:.5rem .7rem;border-radius:8px;cursor:pointer;color:var(--text)">閉じる</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
