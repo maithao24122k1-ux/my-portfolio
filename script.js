@@ -16,19 +16,19 @@ let currentIndex = 0;
 
 const projects = [
   { 
-    title:'Project One', 
+    title:'バナー制作', 
     imgs:['project1.png'], 
-    desc:'eコマース向けUI刷新プロジェクト'
+    desc:''
   },
   { 
-    title:'Brand Identity', 
+    title:' メニュー制作', 
     imgs:['menu/project2.jpg','menu/pro1.jpg'], 
-    desc:'中小企業のCI/VI制作'
+    desc:''
   },
   { 
-    title:'Mobile App UX', 
+    title:'ブランディングデザイン', 
     imgs:['youth/sticker.jpg', 'youth/mockup.jpg', 'youth/abc.jpg'], 
-    desc:'予約アプリのUX改善'
+    desc:''
   }
 ];
 
