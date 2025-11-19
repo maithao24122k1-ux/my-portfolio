@@ -17,7 +17,7 @@ let currentIndex = 0;
 const projects = [
   { 
     title:'バナー制作', 
-    imgs:['project1.png'], 
+    imgs:['project1.png','BANNER.jpg'], 
     desc:''
   },
   { 
